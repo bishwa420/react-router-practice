@@ -38,9 +38,9 @@ function App() {
 
           </nav>
 
-          <Route path="/"><Home/></Route>
-          <Route path="/category"><Category/></Route>
-          <Route path="/products"><Products/></Route>
+          <Route exact path="/"><Home/></Route>
+          <Route exact path="/category"><Category/></Route>
+          <Route exact path="/products"><Products/></Route>
         </div>
     </BrowserRouter>
   );
