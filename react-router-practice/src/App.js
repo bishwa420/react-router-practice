@@ -1,5 +1,7 @@
 import React from "react"
-import {BrowserRouter, Link, Route, Switch} from "react-router-dom";
+import {BrowserRouter, Link, Route, Switch} from "react-router-dom"
+
+import Category from "./component/Category";
 
 const Home = () => (
   <div>
@@ -7,11 +9,13 @@ const Home = () => (
   </div>
 )
 
-const Category = () => (
-    <div>
-      <h2>Category</h2>
-    </div>
-)
+{/*
+    const Category = () => (
+        <div>
+            <h2>Category</h2>
+        </div>
+    )*/
+}
 
 const Products = () => (
     <div>
@@ -38,9 +42,11 @@ function App() {
 
           </nav>
 
-          <Route exact path="/"><Home/></Route>
-          <Route exact path="/category"><Category/></Route>
-          <Route exact path="/products"><Products/></Route>
+          <Switch>
+              <Route exact path="/"><Home/></Route>
+              <Route path="/category"><Category/></Route>
+              <Route path="/products"><Products/></Route>
+          </Switch>
         </div>
     </BrowserRouter>
   );
